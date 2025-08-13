@@ -1,5 +1,5 @@
 #load packages
-library(raster)
+library(raster); library(terra)
 
 #list WDs
 wd_variables <- '/Users/carloseduardoaribeiro/Documents/Collaborations/Iris/Variables'
@@ -9,6 +9,10 @@ setwd(wd_variables)
 minT <- raster('Present.Benthic.Max.Depth.Temperature.Min.tif')
 meanT <- raster('Present.Benthic.Max.Depth.Temperature.Mean.tif')
 maxT <- raster('Present.Benthic.Max.Depth.Temperature.Max.tif')
+
+minT_terra <- rast('Present.Benthic.Max.Depth.Temperature.Min.tif')
+meanT_terra <- rast('Present.Benthic.Max.Depth.Temperature.Mean.tif')
+maxT_terra <- rast('Present.Benthic.Max.Depth.Temperature.Max.tif')
 
 #crop variables to mediterranean extent
 med_extent <- extent(-15, 46.5, 30, 46)
